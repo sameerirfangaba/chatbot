@@ -6,7 +6,7 @@ import os
 load_dotenv()
 app = Flask(__name__)
 
-openai.api_key = "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"
+openai.api_key = os.getenv(OPENAI_API_KEY)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
